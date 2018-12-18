@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="wiki,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="crawl_logic项目逻辑文件每个项目下包含的main.py文件为运行文件  ghost_browsernodejs浏览器渲染池服务器基于nodejs的puppeteer库，支持调用Chrome的API来操作web custom_methods指定文件的js方法 script自定义js脚本base_model为默认基本模式 cluster.jscluster集群多进程处理请求开启渲染池服务">
+<meta name="keywords" content="wiki">
+<meta property="og:type" content="article">
+<meta property="og:title" content="home">
+<meta property="og:url" content="http://yoursite.com/2018/12/18/home/index.html">
+<meta property="og:site_name" content="Katie&#39;s Space">
+<meta property="og:description" content="crawl_logic项目逻辑文件每个项目下包含的main.py文件为运行文件  ghost_browsernodejs浏览器渲染池服务器基于nodejs的puppeteer库，支持调用Chrome的API来操作web custom_methods指定文件的js方法 script自定义js脚本base_model为默认基本模式 cluster.jscluster集群多进程处理请求开启渲染池服务">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-18T09:53:21.848Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="home">
+<meta name="twitter:description" content="crawl_logic项目逻辑文件每个项目下包含的main.py文件为运行文件  ghost_browsernodejs浏览器渲染池服务器基于nodejs的puppeteer库，支持调用Chrome的API来操作web custom_methods指定文件的js方法 script自定义js脚本base_model为默认基本模式 cluster.jscluster集群多进程处理请求开启渲染池服务">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/12/18/home/">
+
+
+
+
+
+  <title>home | Katie's Space</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Katie's Space</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">就算做咸鱼，也得学习</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/18/home/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="katie Leung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Katie's Space">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">home</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-18T17:44:27+08:00">
+                2018-12-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/杂七杂八/" itemprop="url" rel="index">
+                    <span itemprop="name">杂七杂八</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <hr>
+<h2 id="crawl-logic"><a href="#crawl-logic" class="headerlink" title="crawl_logic"></a>crawl_logic</h2><p>项目逻辑文件<br>每个项目下包含的<code>main.py</code>文件为运行文件 </p>
+<h2 id="ghost-browser"><a href="#ghost-browser" class="headerlink" title="ghost_browser"></a>ghost_browser</h2><p><code>nodejs</code>浏览器渲染池服务器<br>基于<code>nodejs</code>的<code>puppeteer</code>库，支持调用<code>Chrome</code>的<code>API</code>来操作<code>web</code></p>
+<h3 id="custom-methods"><a href="#custom-methods" class="headerlink" title="custom_methods"></a>custom_methods</h3><p>指定文件的<code>js</code>方法</p>
+<h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><p>自定义<code>js</code>脚本<br><code>base_model</code>为默认基本模式</p>
+<h3 id="cluster-js"><a href="#cluster-js" class="headerlink" title="cluster.js"></a>cluster.js</h3><p><code>cluster</code>集群多进程处理请求<br>开启渲染池服务</p>
+<h2 id="handlers"><a href="#handlers" class="headerlink" title="handlers"></a>handlers</h2><p>处理器模块</p>
+<h3 id="browser"><a href="#browser" class="headerlink" title="browser"></a>browser</h3><p>浏览器接口  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">browser = RomoteBrowser().request(参数)</span><br><span class="line">```   </span><br><span class="line"> </span><br><span class="line">参数设置：</span><br><span class="line">```  </span><br><span class="line">url = &quot;&quot;,     # 爬取链接</span><br><span class="line">scroll_times = 0,  #下滚次数</span><br><span class="line">disable_pic = False, #不加载图片</span><br><span class="line">target = &quot;&quot;,       #加载链接 字段</span><br><span class="line">filte_list = None,  #过滤url</span><br><span class="line">scroll_wait_time = 2000,  #下滚等待时间</span><br><span class="line">override = None,</span><br><span class="line">need_final_html = True,   #最终页面</span><br><span class="line">user_agent = &quot;&quot;,          </span><br><span class="line">script_name = &quot;&quot;,         #自定义js脚本</span><br><span class="line">cookies = &quot;&quot;, </span><br><span class="line">custom_script_args = None,</span><br><span class="line">side = &quot;inside&quot;,</span><br><span class="line">need_frames = False,     </span><br><span class="line">timeout = 30000,</span><br><span class="line">auto_parser = &quot;&quot;,</span><br><span class="line">custom_js = None,         #指定js脚本</span><br><span class="line">disable_js = False</span><br><span class="line">referer = &apos;&apos;</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">### mongo_handler</span><br><span class="line">操作`mongodb`数据库  </span><br><span class="line">demo:</span><br></pre></td></tr></table></figure>
+<p>with  MongoHandler.create() as mongo:<br>     db = mongo[‘数据库’].表名<br>     existed = db.find({查找的数据})<br>     if existed.count() == 0:<br>        db.insert({插入的数据})<br>      else:<br>        db.update({更新的数据}})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### mysql_handler</span><br><span class="line">操作`mysql`数据库, `model_name`即`mysql_models`中的类名，包含增加一条数据：</span><br></pre></td></tr></table></figure></p>
+<p>MysqlHandler().store_one(data,model_name)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">更新或插入一条数据：</span><br></pre></td></tr></table></figure></p>
+<p>MysqlHandler().update_or_insert_one(data, model_name, key_cols, update = True)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查询数据：  </span><br><span class="line"></span><br><span class="line">```  </span><br><span class="line">MysqlHandler().query(data, model_name, key_cols, delete = False)</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">### mysql_models</span><br><span class="line">数据库模型类</span><br><span class="line">使用`ORM`对象映射</span><br><span class="line">一个类对映一张表</span><br></pre></td></tr></table></figure></p>
+<p>class CoinMarket(Base):</p>
+<pre><code>__tablename__ = &quot;coin_market&quot;
+
+id = Column(BigInteger, primary_key=True)
+symbol = Column(String(10), doc=&apos;缩写&apos;)
+coin_name = Column(String(50), doc=&quot;英文全称&quot;)
+git_link = Column(String(256), doc=&apos;源地址&apos;)
+need = Column(Integer, doc=&apos;是否需要爬取&apos;)
+
+def __init__(self, data):
+
+    self.symbol = data.get(&quot;symbol&quot;)
+    self.coin_name = data.get(&quot;coin_name&quot;)
+    self.git_link = data.get(&quot;git_link&quot;, &quot;&quot;)
+    self.need = data.get(&quot;need&quot;, 1)
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### qiniu_handler</span><br><span class="line">七牛云调用API  官方文档：</span><br><span class="line">[七牛云 python SDK](https://developer.qiniu.com/kodo/sdk/1242/python)</span><br><span class="line"></span><br><span class="line">### redis_handler</span><br><span class="line"></span><br><span class="line">## data_server</span><br><span class="line">`tornado` 数据接口服务  </span><br><span class="line"></span><br><span class="line">本地测试接口请求如下：</span><br></pre></td></tr></table></figure>
+<p><a href="http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062" target="_blank" rel="noopener">http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062</a></p>
+<pre><code>
+返回数据如下：    
+
+</code></pre><p>{“status”: 200, “msg”: “success”, “data”: [{“fork”: 21364, “star”: 35373, “contributors”: 580, “releases”: 208, “commits”: 18460, “watch”: 3528, “created_time”: 1539684061, “branches”: 8, “lastest_commit_time”: 1539637425}, {“fork”: 21364, “star”: 35374, “contributors”: 580, “releases”: 208, “commits”: 18460, “watch”: 3528, “created_time”: 1539685644, “branches”: 8, “lastest_commit_time”: 1539637425}]}<br><code>`</code>  </p>
+<h3 id="handlers-1"><a href="#handlers-1" class="headerlink" title="handlers"></a>handlers</h3><p>处理请求及逻辑代码</p>
+<h3 id="libs"><a href="#libs" class="headerlink" title="libs"></a>libs</h3><p>自定义返回消息配置<br><code>options</code>全局参数定义、存储、转换</p>
+<h3 id="server-settings"><a href="#server-settings" class="headerlink" title="server_settings"></a>server_settings</h3><p>服务配置文件</p>
+<h3 id="app"><a href="#app" class="headerlink" title="app"></a>app</h3><p>接口服务文件<br>包括路由映射与分发</p>
+<h3 id="urls"><a href="#urls" class="headerlink" title="urls"></a>urls</h3><p>路由生成文件</p>
+<h2 id="mannual-utils"><a href="#mannual-utils" class="headerlink" title="mannual_utils"></a>mannual_utils</h2><p>需要手动执行的文件</p>
+<h2 id="parser"><a href="#parser" class="headerlink" title="parser"></a>parser</h2><p>网页解析文件</p>
+<h2 id="utils"><a href="#utils" class="headerlink" title="utils"></a>utils</h2><p>工具类</p>
+<h3 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h3><p>项目启动器</p>
+<h3 id="cron-dealer"><a href="#cron-dealer" class="headerlink" title="cron_dealer"></a>cron_dealer</h3><p><code>crontab</code>定时器</p>
+<h3 id="js-caller"><a href="#js-caller" class="headerlink" title="js_caller"></a>js_caller</h3><h3 id="loger"><a href="#loger" class="headerlink" title="loger"></a>loger</h3><p>日志文件</p>
+<h3 id="method"><a href="#method" class="headerlink" title="method"></a>method</h3><p>常用方法</p>
+<h2 id="settings"><a href="#settings" class="headerlink" title="settings"></a>settings</h2><p>环境配置</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/wiki/" rel="tag"># wiki</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/18/docker/" rel="prev" title="docker学习笔记">
+                docker学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpeg" alt="katie Leung">
+            
+              <p class="site-author-name" itemprop="name">katie Leung</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/lfykid" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#crawl-logic"><span class="nav-number">1.</span> <span class="nav-text">crawl_logic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ghost-browser"><span class="nav-number">2.</span> <span class="nav-text">ghost_browser</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#custom-methods"><span class="nav-number">2.1.</span> <span class="nav-text">custom_methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#script"><span class="nav-number">2.2.</span> <span class="nav-text">script</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cluster-js"><span class="nav-number">2.3.</span> <span class="nav-text">cluster.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#handlers"><span class="nav-number">3.</span> <span class="nav-text">handlers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#browser"><span class="nav-number">3.1.</span> <span class="nav-text">browser</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#handlers-1"><span class="nav-number">3.2.</span> <span class="nav-text">handlers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#libs"><span class="nav-number">3.3.</span> <span class="nav-text">libs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#server-settings"><span class="nav-number">3.4.</span> <span class="nav-text">server_settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#app"><span class="nav-number">3.5.</span> <span class="nav-text">app</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#urls"><span class="nav-number">3.6.</span> <span class="nav-text">urls</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mannual-utils"><span class="nav-number">4.</span> <span class="nav-text">mannual_utils</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#parser"><span class="nav-number">5.</span> <span class="nav-text">parser</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#utils"><span class="nav-number">6.</span> <span class="nav-text">utils</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#controller"><span class="nav-number">6.1.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cron-dealer"><span class="nav-number">6.2.</span> <span class="nav-text">cron_dealer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js-caller"><span class="nav-number">6.3.</span> <span class="nav-text">js_caller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#loger"><span class="nav-number">6.4.</span> <span class="nav-text">loger</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#method"><span class="nav-number">6.5.</span> <span class="nav-text">method</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#settings"><span class="nav-number">7.</span> <span class="nav-text">settings</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">katie Leung</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
