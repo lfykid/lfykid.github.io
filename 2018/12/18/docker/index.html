@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="参考docker官网.   ##00x1 docker是什么    Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去">
+<meta name="description" content="参考docker官网.   00x1 docker是什么   Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 L">
 <meta name="keywords" content="docker">
 <meta property="og:type" content="article">
 <meta property="og:title" content="docker学习笔记">
 <meta property="og:url" content="http://yoursite.com/2018/12/18/docker/index.html">
 <meta property="og:site_name" content="Katie&#39;s Space">
-<meta property="og:description" content="参考docker官网.   ##00x1 docker是什么    Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去">
+<meta property="og:description" content="参考docker官网.   00x1 docker是什么   Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 L">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-18T09:12:36.758Z">
+<meta property="og:updated_time" content="2018-12-18T09:26:39.387Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker学习笔记">
-<meta name="twitter:description" content="参考docker官网.   ##00x1 docker是什么    Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去">
+<meta name="twitter:description" content="参考docker官网.   00x1 docker是什么   Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 L">
 
 
 
@@ -353,25 +353,22 @@
 
       
         <p>参考<a href="https://www.docker.com/why-docker" target="_blank" rel="noopener">docker官网</a>.  </p>
-<p>##00x1 docker是什么</p>
-<p>   Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 LXC，转而使用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC和 containerd。<br>   Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。<br>    传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。  </p>
-<p>##00x2 mac下安装docker</p>
-<p>直接到官网下载docker.dmg文件，然后点击，一步步操作</p>
+<h2 id="00x1-docker是什么"><a href="#00x1-docker是什么" class="headerlink" title="00x1 docker是什么"></a>00x1 docker是什么</h2><p>   Docker 使用 Google 公司推出的 Go 语言进行开发实现，基于 Linux 内核的 cgroup，namespace，以及 AUFS类的 Union FS等技术，对进程进行封装隔离，属于操作系统层面的虚拟化技术。由于隔离的进程独立于宿主和其它的隔离的进程，因此也称其为容器。最初实现是基于 LXC，从 0.7 以后开始去除 LXC，转而使用自行开发的 libcontainer，从 1.11 开始，则进一步演进为使用 runC和 containerd。<br>   Docker 在容器的基础上，进行了进一步的封装，从文件系统、网络互联到进程隔离等等，极大的简化了容器的创建和维护。使得 Docker 技术比虚拟机技术更为轻便、快捷。<br>    传统虚拟机技术是虚拟出一套硬件后，在其上运行一个完整操作系统，在该系统上再运行所需应用进程；而容器内的应用进程直接运行于宿主的内核，容器内没有自己的内核，而且也没有进行硬件虚拟。因此容器要比传统虚拟机更为轻便。  </p>
+<h2 id="00x2-mac下安装docker"><a href="#00x2-mac下安装docker" class="headerlink" title="00x2 mac下安装docker"></a>00x2 mac下安装docker</h2><p>直接到官网下载docker.dmg文件，然后点击，一步步操作</p>
 <p>检测Docker Engine, Docker Compose, 和Docker Machine的版本: </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">➜  docker version</span><br><span class="line">Client:</span><br><span class="line"> Version:      17.03.1-ce</span><br><span class="line"> API version:  1.27</span><br><span class="line"> Go version:   go1.7.5</span><br><span class="line"> Git commit:   c6d412e</span><br><span class="line"> Built:        Tue Mar 28 00:40:02 2017</span><br><span class="line"> OS/Arch:      darwin/amd64</span><br><span class="line"></span><br><span class="line">Server:</span><br><span class="line"> Version:      17.03.1-ce</span><br><span class="line"> API version:  1.27 (minimum version 1.12)</span><br><span class="line"> Go version:   go1.7.5</span><br><span class="line"> Git commit:   c6d412e</span><br><span class="line"> Built:        Fri Mar 24 00:00:50 2017</span><br><span class="line"> OS/Arch:      linux/amd64</span><br><span class="line"> Experimental: true</span><br><span class="line">➜  docker-compose --version</span><br><span class="line">docker-compose version 1.11.2, build dfed245</span><br><span class="line">➜  docker-machine --version</span><br><span class="line">docker-machine version 0.10.0, build 76ed2a6</span><br></pre></td></tr></table></figure>
 <p>配置加速器：<br>Docker 加速器是什么，我需要使用吗？<br>使用 Docker 的时候，需要经常从官方获取镜像，但是由于显而易见的网络原因，拉取镜像的过程非常耗时，严重影响使用 Docker 的体验。因此 DaoCloud 推出了加速器工具解决这个难题，通过智能路由和缓存机制，极大提升了国内网络访问 Docker Hub 的速度，目前已经拥有了广泛的用户群体，并得到了 Docker 官方的大力推荐。如果您是在国内的网络环境使用 Docker，那么 Docker 加速器一定能帮助到您。<br>注册daocloud，然后在mac标签页复制加速器url。<br>daocloud<br>配置</p>
-<p>##00x3 运行官网提供的二个简单列子</p>
-<p>拉取hello-world镜像  </p>
+<h2 id="00x3-运行官网提供的二个简单列子"><a href="#00x3-运行官网提供的二个简单列子" class="headerlink" title="00x3 运行官网提供的二个简单列子"></a>00x3 运行官网提供的二个简单列子</h2><p>拉取hello-world镜像  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull hello-world</span><br><span class="line">hello-world</span><br></pre></td></tr></table></figure>
 <p>查看hello-world镜像信息：  </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">➜ docker images hello-world</span><br><span class="line">REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE </span><br><span class="line">hello-world         latest              1815c82652c0        5 days ago          1.84 kB</span><br></pre></td></tr></table></figure>
 <p>根据镜像生成对应容器  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜ docker run hello-world</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">根据镜像生成容器  </span><br><span class="line">* ps不加参数只会把当前运行的Community打印出来，查看当前所有的Community，加上-a参数。</span><br></pre></td></tr></table></figure>
-<p>➜ docker ps -a<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">查看当前所有容器</span><br><span class="line">当然也可以根据镜像生成一个具体名称的镜像，先删除当前容器</span><br></pre></td></tr></table></figure></p>
-<p>docker rm 60<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">删除容器  </span><br><span class="line"></span><br><span class="line">当然如果当前容器正在运行，要删除这个容器，则使用命令</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">➜ docker run hello-world</span><br><span class="line">```   </span><br><span class="line"></span><br><span class="line">根据镜像生成容器  </span><br><span class="line">* ps不加参数只会把当前运行的Community打印出来，查看当前所有的Community，加上-a参数。</span><br></pre></td></tr></table></figure>
+<p>➜ docker ps -a<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line">查看当前所有容器</span><br><span class="line">当然也可以根据镜像生成一个具体名称的镜像，先删除当前容器</span><br></pre></td></tr></table></figure></p>
+<p>docker rm 60<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">删除容器  </span><br><span class="line"></span><br><span class="line">当然如果当前容器正在运行，要删除这个容器，则使用命令</span><br></pre></td></tr></table></figure></p>
 <p>docker rm -f 60<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用镜像生成具体名称的容器：</span><br></pre></td></tr></table></figure></p>
 <p>docker run –name miaozhihao hello-world<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">指定容器的名称</span><br><span class="line"></span><br><span class="line">关于更多的docker run的命令可以使用来查看</span><br></pre></td></tr></table></figure></p>
-<p>docker run –help<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">###第二个examples，启动docker的web服务</span><br></pre></td></tr></table></figure></p>
+<p>docker run –help<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 第二个examples，启动docker的web服务</span><br></pre></td></tr></table></figure></p>
 <p>docker pull nginx<br>docker run -d -p 80:80 –name webserver nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">-p参数是使用宿主机的80映射容器的80端口</span><br></pre></td></tr></table></figure></p>
 <p>➜ curl localhost:80<br>&lt;!DOCTYPE html&gt;</p>
 <p><html></html></p>
@@ -393,9 +390,8 @@
 <p>docker images nginx<br>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE<br>nginx               v2                  0a34c054b8a8        11 seconds ago      109 MB<br>nginx               latest              958a7ae9e569        4 weeks ago         109 MB<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查看当前所有的容器，包括运行的和停止的</span><br></pre></td></tr></table></figure></p>
 <p>➜ docker ps -a<br>\CONTAINER ID        IMAGE                                 COMMAND                  CREATED             STATUS                    PORTS                NAMES<br>41b6804c716e        nginx                                 “nginx -g ‘daemon …”   3 minutes ago       Up 3 minutes              0.0.0.0:80-&gt;80/tcp   webserver<br>85612b405cda        miaozhihao001dockerhub/commit_test1   “nginx -g ‘daemon …”   20 hours ago        Exited (0) 3 hours ago                         nginx_web<br>9ef1fb35d7aa        ubuntu:14.04                          “/bin/bash”              20 hours ago        Exited (0) 20 hours ago                        commit_test<br>bf8320b9e445        ubuntu:14.04                          “/bin/bash”              24 hours ago        Exited (0) 24 hours ago                        sharp_curie<br>9f9767eb8aaf        hello-world                           “/hello”                 10 days ago         Exited (0) 10 days ago                 miaozhihao<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">启动新的容器</span><br></pre></td></tr></table></figure></p>
 <p>➜ docker run –name newwebserver -d -p 80:80 nginx:v2<br>3619b34ed347cf1ae2ee3ab32c419140871f3084b9a1325ab5d8c6155d43bf06<br>➜ curl localhost:80</p>
-<p></p><h1>Hello, Docker!</h1><br><code>`</code><p></p>
-<p>##00x4一些docker命令总结</p>
-<ul>
+<p></p><h1>Hello, Docker!</h1><br><code>`</code>  <p></p>
+<h2 id="00x4一些docker命令总结"><a href="#00x4一些docker命令总结" class="headerlink" title="00x4一些docker命令总结"></a>00x4一些docker命令总结</h2><ul>
 <li>docker images :查看当前宿主机的所有镜像。</li>
 <li>docker images ubuntu：根据仓库名列出镜像</li>
 <li>docker images ubuntu:14.04:指定仓库名和标签</li>
@@ -404,8 +400,8 @@
 <li>docker run -d -p 2222:22 –name base centos:7.1<br>表示根据指定的镜像后台运行容器，容器的名字是base（–name就是指定容器的名字)，centos:7.1表示镜像的名字，-p参数表示当前宿主机的2222端口对应容器的22端口。<br>-d参数表示（Run container in background and print container ID）</li>
 <li>docker exec -it base /bin/bash<br>以交互式命令进入base容器并且执行/bin/bash命令</li>
 <li>docker rmi webservice:删除webservice镜像</li>
-<li><p>docker rm base: 删除base容器，如果base正在运行，则可以使用docker rm -f base进行强行删除<br>##00x5 Docker 三个基本概念</p>
-</li>
+<li><p>docker rm base: 删除base容器，如果base正在运行，则可以使用docker rm -f base进行强行删除</p>
+<h2 id="00x5-Docker-三个基本概念"><a href="#00x5-Docker-三个基本概念" class="headerlink" title="00x5 Docker 三个基本概念"></a>00x5 Docker 三个基本概念</h2></li>
 <li><p>镜像（Image）<br>Docker 镜像是一个特殊的文件系统，除了提供容器运行时所需的程序、库、资源、配置等文件外，还包含了一些为运行时准备的一些配置参数（如匿名卷、环境变量、用户等）。镜像不包含任何动态数据，其内容在构建之后也不会被改变。</p>
 </li>
 <li>容器（Container）、镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。<br>容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 命名空间。因此容器可以拥有自己的 root文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间。容器内的进程是运行在一个隔离的环境里，使用起来，就好像是在一个独立于宿主的系统下操作一样。这种特性使得容器封装的应用比直接在宿主运行更加安全。</li>
@@ -595,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">Welcome to nginx!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">Hello, Docker!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">Hello, Docker!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#00x1-docker是什么"><span class="nav-number">1.</span> <span class="nav-text">00x1 docker是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#00x2-mac下安装docker"><span class="nav-number">2.</span> <span class="nav-text">00x2 mac下安装docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#00x3-运行官网提供的二个简单列子"><span class="nav-number">3.</span> <span class="nav-text">00x3 运行官网提供的二个简单列子</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Welcome to nginx!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Hello, Docker!</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number"></span> <span class="nav-text">Hello, Docker!</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#00x4一些docker命令总结"><span class="nav-number">1.</span> <span class="nav-text">00x4一些docker命令总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#00x5-Docker-三个基本概念"><span class="nav-number">2.</span> <span class="nav-text">00x5 Docker 三个基本概念</span></a></li></ol></div>
             
 
           </div>
