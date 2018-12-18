@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Katie&#39;s Space">
 <meta property="og:description" content="Homecrawl_logic项目逻辑文件每个项目下包含的main.py文件为运行文件  ghost_browsernodejs浏览器渲染池服务器基于nodejs的puppeteer库，支持调用Chrome的API来操作web custom_methods指定文件的js方法 script自定义js脚本base_model为默认基本模式 cluster.jscluster集群多进程处理请求开启渲染池">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-18T07:06:27.883Z">
+<meta property="og:updated_time" content="2018-12-18T09:09:08.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="home">
 <meta name="twitter:description" content="Homecrawl_logic项目逻辑文件每个项目下包含的main.py文件为运行文件  ghost_browsernodejs浏览器渲染池服务器基于nodejs的puppeteer库，支持调用Chrome的API来操作web custom_methods指定文件的js方法 script自定义js脚本base_model为默认基本模式 cluster.jscluster集群多进程处理请求开启渲染池">
@@ -359,11 +359,11 @@
 <h3 id="cluster-js"><a href="#cluster-js" class="headerlink" title="cluster.js"></a>cluster.js</h3><p><code>cluster</code>集群多进程处理请求<br>开启渲染池服务</p>
 <h2 id="handlers"><a href="#handlers" class="headerlink" title="handlers"></a>handlers</h2><p>处理器模块</p>
 <h3 id="browser"><a href="#browser" class="headerlink" title="browser"></a>browser</h3><p>浏览器接口  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">browser = RomoteBrowser().request(参数)</span><br><span class="line">```  </span><br><span class="line">参数设置：</span><br></pre></td></tr></table></figure>
-<p>url = “”,     # 爬取链接<br>scroll_times = 0,  #下滚次数<br>disable_pic = False, #不加载图片<br>target = “”,       #加载链接 字段<br>filte_list = None,  #过滤url<br>scroll_wait_time = 2000,  #下滚等待时间<br>override = None,<br>need_final_html = True,   #最终页面<br>user_agent = “”,<br>script_name = “”,         #自定义js脚本<br>cookies = “”,<br>custom_script_args = None,<br>side = “inside”,<br>need_frames = False,<br>timeout = 30000,<br>auto_parser = “”,<br>custom_js = None,         #指定js脚本<br>disable_js = False<br>referer = ‘’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### mongo_handler</span><br><span class="line">操作`mongodb`数据库  </span><br><span class="line">demo:</span><br></pre></td></tr></table></figure></p>
-<p>with  MongoHandler.create() as mongo:<br>     db = mongo[‘数据库’].表名<br>     existed = db.find({查找的数据})<br>     if existed.count() == 0:<br>        db.insert({插入的数据})<br>      else:<br>        db.update({更新的数据}})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">### mysql_handler</span><br><span class="line">操作`mysql`数据库, `model_name`即`mysql_models`中的类名，包含增加一条数据：</span><br></pre></td></tr></table></figure></p>
-<p>MysqlHandler().store_one(data,model_name)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">更新或插入一条数据：</span><br></pre></td></tr></table></figure></p>
-<p>MysqlHandler().update_or_insert_one(data, model_name, key_cols, update = True)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">查询数据：</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">browser = RomoteBrowser().request(参数)</span><br><span class="line">``` </span><br><span class="line"> </span><br><span class="line">参数设置：</span><br></pre></td></tr></table></figure>
+<p>url = “”,     # 爬取链接<br>scroll_times = 0,  #下滚次数<br>disable_pic = False, #不加载图片<br>target = “”,       #加载链接 字段<br>filte_list = None,  #过滤url<br>scroll_wait_time = 2000,  #下滚等待时间<br>override = None,<br>need_final_html = True,   #最终页面<br>user_agent = “”,<br>script_name = “”,         #自定义js脚本<br>cookies = “”,<br>custom_script_args = None,<br>side = “inside”,<br>need_frames = False,<br>timeout = 30000,<br>auto_parser = “”,<br>custom_js = None,         #指定js脚本<br>disable_js = False<br>referer = ‘’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">### mongo_handler</span><br><span class="line">操作`mongodb`数据库  </span><br><span class="line">demo:</span><br></pre></td></tr></table></figure></p>
+<p>with  MongoHandler.create() as mongo:<br>     db = mongo[‘数据库’].表名<br>     existed = db.find({查找的数据})<br>     if existed.count() == 0:<br>        db.insert({插入的数据})<br>      else:<br>        db.update({更新的数据}})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### mysql_handler</span><br><span class="line">操作`mysql`数据库, `model_name`即`mysql_models`中的类名，包含增加一条数据：</span><br></pre></td></tr></table></figure></p>
+<p>MysqlHandler().store_one(data,model_name)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">更新或插入一条数据：</span><br></pre></td></tr></table></figure></p>
+<p>MysqlHandler().update_or_insert_one(data, model_name, key_cols, update = True)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查询数据：</span><br></pre></td></tr></table></figure></p>
 <p>MysqlHandler().query(data, model_name, key_cols, delete = False)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### mysql_models</span><br><span class="line">数据库模型类</span><br><span class="line">使用`ORM`对象映射</span><br><span class="line">一个类对映一张表</span><br></pre></td></tr></table></figure></p>
 <p>class CoinMarket(Base):</p>
 <pre><code>__tablename__ = &quot;coin_market&quot;
@@ -380,8 +380,8 @@ def __init__(self, data):
     self.coin_name = data.get(&quot;coin_name&quot;)
     self.git_link = data.get(&quot;git_link&quot;, &quot;&quot;)
     self.need = data.get(&quot;need&quot;, 1)
-</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">### qiniu_handler</span><br><span class="line">七牛云调用API  官方文档：</span><br><span class="line">[七牛云 python SDK](https://developer.qiniu.com/kodo/sdk/1242/python)</span><br><span class="line"></span><br><span class="line">### redis_handler</span><br><span class="line"></span><br><span class="line">## data_server</span><br><span class="line">`tornado` 数据接口服务  </span><br><span class="line"></span><br><span class="line">本地测试接口请求如下：</span><br></pre></td></tr></table></figure>
-<p><a href="http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062" target="_blank" rel="noopener">http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回数据如下：</span><br></pre></td></tr></table></figure></p>
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### qiniu_handler</span><br><span class="line">七牛云调用API  官方文档：</span><br><span class="line">[七牛云 python SDK](https://developer.qiniu.com/kodo/sdk/1242/python)</span><br><span class="line"></span><br><span class="line">### redis_handler</span><br><span class="line"></span><br><span class="line">## data_server</span><br><span class="line">`tornado` 数据接口服务  </span><br><span class="line"></span><br><span class="line">本地测试接口请求如下：</span><br></pre></td></tr></table></figure>
+<p><a href="http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062" target="_blank" rel="noopener">http://127.0.0.1:8086/github/base_info?coin_name=Bitcoin&amp;start=1539684061&amp;end=1539684062</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">返回数据如下：</span><br></pre></td></tr></table></figure></p>
 <p>{“status”: 200, “msg”: “success”, “data”: [{“fork”: 21364, “star”: 35373, “contributors”: 580, “releases”: 208, “commits”: 18460, “watch”: 3528, “created_time”: 1539684061, “branches”: 8, “lastest_commit_time”: 1539637425}, {“fork”: 21364, “star”: 35374, “contributors”: 580, “releases”: 208, “commits”: 18460, “watch”: 3528, “created_time”: 1539685644, “branches”: 8, “lastest_commit_time”: 1539637425}]}<br><code>`</code></p>
 <h3 id="handlers-1"><a href="#handlers-1" class="headerlink" title="handlers"></a>handlers</h3><p>处理请求及逻辑代码</p>
 <h3 id="libs"><a href="#libs" class="headerlink" title="libs"></a>libs</h3><p>自定义返回消息配置<br><code>options</code>全局参数定义、存储、转换</p>
@@ -422,6 +422,22 @@ def __init__(self, data):
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/12/18/docker/" rel="prev" title="docker学习笔记">
+                docker学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -497,7 +513,7 @@ def __init__(self, data):
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -508,7 +524,7 @@ def __init__(self, data):
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -519,7 +535,7 @@ def __init__(self, data):
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
